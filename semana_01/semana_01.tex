@@ -1,5 +1,8 @@
 \documentclass{beamer}
 
+\usepackage{amsmath}
+\usepackage{apacite}
+
 \author{George G Vega\\ \url{mailto:gvegayon@caltech.edu}}
 \title{An\'alisis de Redes}
 \date{20 de junio, 2014}
@@ -22,16 +25,38 @@
 
 \begin{itemize}
 \item Grafo
-\item Nodo
-\item Edge
-\item Grado (entrada/salida)
-\item Geod\'esica
-\item Diada
-\item Triada
-\item Componente (gigante)
+\item[Vertice] (aka nodo) Unidad fundamental de un grafo.
+\item[Conexi\'on] (link) Puede ser dirigida o no.
+\item[Grado] (entrada/salida) N\'umero de conexiones de un nodo.
+\item[Geod\'esica] Distancia m\'as corta entre dos nodos.
+\item[Diametro] Distancia m\'as larga en un g\'rafo. 
+\item[Diada] Par de nodos conectados.
+\item[Triada] Trio de nodos conectados
+\item[Componente] (gigante) Porci\'on de un grafo desconectado.
 \item Centralidad*
 \item Clusterizacion*
 \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Medidas}
+
+M\'aximo n\'umero de conexiones en un grafo
+\begin{equation}
+\frac{1}{2}n(n-1)
+\end{equation}
+\end{frame}
+
+\begin{frame}
+\frametitle{Mundos Peque\~nos}
+item Se puede medir en funci\'on de la geod\'esica media
+
+\begin{equation}
+l = \frac{1}{\frac{1}{2}n(n+1)}\sum_{i\geq j}{d_{ij}}
+\end{equation}
+
+Notar que $\frac{1}{2}n(n+1)$ corresponde al m\'aximo n\'umero de links
+posibles.
 \end{frame}
 
 \section{Estad\'isticos}
@@ -40,7 +65,8 @@
 \begin{itemize}
 \item Centralidad
   \begin{itemize}
-  \item A
+  \item Erdös
+  \item Kevin Bacon \url{http://oracleofbacon.org/}
   \end{itemize}
 \item Centralidad de inter mediaci\'on
   \begin{itemize}
@@ -57,4 +83,14 @@
 
 \section{Ejemplos}
 
+\section{Referencias}
+\nocite{*}
+\begin{frame}
+\frametitle{Referencias}
+\bibliographystyle{apacite}
+\bibliography{../bib}
+\end{frame}
+
+
 \end{document}
+
