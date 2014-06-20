@@ -6,4 +6,6 @@ all: semana_01.tex
 	$(MAKE) clean
 clean:
 	rm -f *.out *.log *.toc *.snm *.nav *.aux *.bbl *.blg *.dvi *.fls
+sp:
+	$(MAKE) -f makefile.sp
 
