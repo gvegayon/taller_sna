@@ -1,0 +1,20 @@
+Network data 
+Mark Newman
+http://www-personal.umich.edu/~mejn/netdata/
+
+Gephi datasets
+http://wiki.gephi.org/index.php/Datasets
+
+University of California Irvine
+Network Data Repository
+https://networkdata.ics.uci.edu/resources.php
+
+University of Indiana
+Truthy API
+http://truthy.indiana.edu/apidoc
+
+Stanford Univerisity
+Stanford Large Network Dataset Collection
+https://snap.stanford.edu/data/
+
+
