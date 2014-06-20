@@ -3,7 +3,7 @@
 \usetheme{Warsaw}
 
 \usepackage{amsmath}
-\usepackage{apacite}
+%\usepackage[style=apa]{biblatex}
 \usepackage{multimedia}
 
 \author{George G Vega\thanks{\url{mailto:gvegayon@caltech.edu}}}
@@ -43,14 +43,14 @@ Esta parte del curso se centrar\'a en lo siguiente:
 C\'omo se estudian las redes?
 
 \begin{itemize}
-\item {\bf Redes biologicas} Redes de prote\'inas, aliment\'icias, etc.
-\item {\bf Redes tecnol\'ogicas} Redes de telecomunicaciones, transporte, etc.
-\item {\bf Redes humanas} Amigos, familia, parejas sexuales, etc.
-\item {\bf Redes Sociales (virtuales)} Facebook, twitter, etc.
+\item {\bf Redes biologicas} Redes metab\'olicas, redes regulatorias, etc.
+\item {\bf Redes tecnol\'ogicas} Redes de telecomunicaciones, energ\'ia, transporte, etc.
+\item {\bf Redes sociales} Amigos, familia, parejas sexuales, etc.
+\item {\bf de Informaci\'on} Citas acad\'emicas, World Wide Web (Red), etc.
 \end{itemize}
 
-En las ciencias sociales es donde se lleva m\'as tiempo desarrollando investigaci\'on
-cuantitativa al respecto.
+En las ciencias sociales es donde se lleva m\'as tiempo desarrollando
+investigaci\'on cuantitativa al respecto.
 
 \end{frame}
 
@@ -96,23 +96,34 @@ M\'aximo n\'umero de conexiones en un grafo
 \begin{frame}
 \frametitle{Mundos Peque\~nos}
 
-El trabajo de Milgran con sus seis grados de distancia
+{\bf efecto mundo-peque\~no} el hecho de que la mayor\'ia de los pares de
+nodos est\'a conectado por un camino peque\~no a lo largo del grafo.
+
+La primera evidencia de esto se encuentra en el experimento de Stanley Milgram
+\cite{milgram1967} 
 
 Se puede medir en funci\'on de la geod\'esica media
 
 \begin{equation}
-l = \frac{1}{\frac{1}{2}n(n+1)}\sum_{i\geq j}{d_{ij}}
+\ell = \frac{1}{\frac{1}{2}n(n+1)}\sum_{i\geq j}{d_{ij}}
 \end{equation}
 
 Notar que $\frac{1}{2}n(n+1)$ corresponde al m\'aximo n\'umero de links
 posibles.
+
+Como $d_{ij} \rightarrow \infty$, se recomienda calcular
+
+\begin{equation}
+\ell^{-1} = \frac{1}{\frac{1}{2}n(n+1)}\sum_{i\geq j}{d_{ij}^{-1}}
+\end{equation}
+
 \end{frame}
 
 \section{Estad\'isticos}
 
 \begin{frame}
 \begin{itemize}
-\item Centralidad de Grado
+\item Centralidad de Grado (in/out)
 \item Centralidad de Cercan\'ia
 \item Centralidad de Intermediaci\'on
 \item Eigen-vector
@@ -121,9 +132,21 @@ posibles.
 
 Otras medidas de centralidad...
 \begin{itemize}
-\item N\'umero de Erd{\"o}s \url{}
+\item N\'umero de Erd{\"o}s 
 \item El or\'aculo de Kevin Bacon \url{http://oracleofbacon.org/}
 \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Clusterizaci\'on (Watts y Strogratz, 1998)}
+
+Indica en qu\'e medida existen triadas conectadas en un grafo.
+
+\begin{equation}
+C = \frac{3 \times \text{\# de triangulos en el grafo}}{\text{\# de triadas}}
+\end{equation}
+
+El n\'umero 3 se utiliza para asegurar que el \'indice se encuentre entre 0 y 1
 
 \end{frame}
 
@@ -132,23 +155,22 @@ Otras medidas de centralidad...
 
 \begin{itemize}
 \item \cite{newman2003structure}
-\item 
+\item a
 \end{itemize}
-
 \end{frame}
 
 \section{Ejemplos}
 
 \begin{frame}
+Last frame
 %\movie[options]{placeholder box}{movie filename}
 \end{frame}
 
 \section{Referencias}
-\nocite{}
 \begin{frame}
 \frametitle{Referencias}
-\bibliographystyle{apacite}
-\bibliography{../bib}
+\bibliographystyle{plain}
+\bibliography{bib}
 \end{frame}
 
 
