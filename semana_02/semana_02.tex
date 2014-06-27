@@ -1,4 +1,4 @@
-\documentclass[10pt]{beamer}
+\documentclass[10pt,draft]{beamer}
 
 \usetheme{Warsaw}
 
@@ -27,6 +27,25 @@
 \item Estructura: Homofilia (assortative mixing), Algoritmos de clusterizaci\'on
 \item 
 \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Resiliencia de un grafo}
+
+\begin{quote}
+Un grafo $G$ (de una cierta clase) posee la propiedad $P$ [...] Qu\'e tan 
+\emph{fuertemente} poseida se encuentra dicha propiedad? [...] Definimos
+{\bf resiliencia} del grafo $G$ con respecto a $P$ como la medida que indica
+que tanto debe cambiar $G$ para destruir $P$.
+\end{quote} 
+
+\begin{quote}
+[...] ({\bf Resiliencia}) Sea $P$ una propiedad 
+monot\'onicamente creciente. La resiliencia global de $G$ con respecto a $P$ es
+el n\'umero m\'inimo $r$ tal que al eliminar $r$ arcos/vertices de $G$ resulta
+en la p\'erdida de la propiedad $P$
+\end{quote}
+{\footnotesize Fuente: Adaptado de \cite{sudakov2008local}}
 \end{frame}
 
 \begin{frame}
@@ -76,6 +95,37 @@ que pasan a trav\'es del nodo $k$. \cite{borgatti2005centrality}
 \includegraphics[width=.8\linewidth]{PageRank-hi-res}
 \end{figure}
 {\footnotesize Caricatura de PageRank}
+\end{frame}
+
+\begin{frame}
+\frametitle{Importar datos}
+\framesubtitle{Pasos a seguir}
+
+Una manera de importar datos a Gephi es a trav\'es de archivos delimitados por
+comas (CSV). Para hacerlo son necesarios dos archivos, uno con v\'ertices y otro
+con arcos.
+
+Pasos seg\'un \cite{cherven2013network}
+
+\begin{enumerate}
+\item Crear un archivo de {\bf v\'ertices} cuyo contenido es:
+  \begin{enumerate}
+  \item Identificador.
+  \item N\'umero de identificaci\'on
+  \item Etiqueta
+  \end{enumerate}
+\item Crear un archivo de {\bf arcos} cuyo contenido es:
+  \begin{enumerate}
+  \item Origen
+  \item Destino
+  \item Tipo (directed/undirected)
+  \item N\'umero de identificaci\'on
+  \item Etiqueta
+  \end{enumerate}
+\item Guardar ambos archivos en formato .csv
+\item Abrir Gephi y dirigirse al \emph{laboratorio de datos}, lugo clickear en
+\emph{Importar archivo de nodos} y \emph{Importar archivo de arcos}.
+\end{enumerate}
 \end{frame}
 
 \begin{frame}
