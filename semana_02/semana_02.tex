@@ -1,4 +1,4 @@
-\documentclass[10pt,draft]{beamer}
+\documentclass[10pt,handout]{beamer}
 
 \usetheme{Warsaw}
 
@@ -20,14 +20,8 @@
 \tableofcontents
 \end{frame}
 
-\begin{frame}
-\begin{itemize}
-\item Resilencia: Algunas ideas.
-\item Medidas de centralidad: Grado, Cercan\'ia, Intermediaci\'on
-\item Estructura: Homofilia (assortative mixing), Algoritmos de clusterizaci\'on
-\item 
-\end{itemize}
-\end{frame}
+
+\section{Resiliencia}
 
 \begin{frame}
 \frametitle{Resiliencia de un grafo}
@@ -55,6 +49,20 @@ en la p\'erdida de la propiedad $P$
 {\footnotesize Fuente: Extraido del curso \emph{Social Network Analysis}, Lada
 Adamic, University of Michigan \cite{lada2014}}
 \end{frame}
+
+\section{Homofilia (assortative mixing)}
+
+\begin{frame}
+\frametitle{Homofilia (assortative mixing)}
+\begin{figure}
+\centering
+% trim=l b r t
+\includegraphics[trim= 1cm 16cm 11cm 1cm, clip=true, width=.5\linewidth]{assortative_mix.pdf}
+\end{figure}
+{\footnotesize Fuente: \cite{newman2002assortative}}
+\end{frame}
+
+\section{Centralidad}
 
 \begin{frame}
 \frametitle{Centralidad}
@@ -97,8 +105,22 @@ que pasan a trav\'es del nodo $k$. \cite{borgatti2005centrality}
 {\footnotesize Caricatura de PageRank}
 \end{frame}
 
+\section{Importar datos a Gephi}
+
 \begin{frame}
-\frametitle{Importar datos}
+\frametitle{Importad datos a Gephi}
+Existen varias formas de importar datos a Gephi:
+\begin{itemize}
+\item {\bf GEXF} Formato XML, soporta atributos din\'amicos y est\'aticos + jerarqu\'ia \url{http://gexf.net}.
+\item {\bf GDF} Texto plano \url{http://guess.wikispot.org/The_GUESS_.gdf_format}.
+\item {\bf Pajek NET} Formato de pajek, texto plano \url{http://netwiki.amath.unc.edu/DataFormats/PajekNetAndPajFormats}
+\item {\bf UCINET} \url{http://www.analytictech.com/networks/dataentry.htm}
+\item {\bf Archivos CSV} los revisaremos en breve...
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Importar datos a Gephi}
 \framesubtitle{Pasos a seguir}
 
 Una manera de importar datos a Gephi es a trav\'es de archivos delimitados por
@@ -128,22 +150,9 @@ Pasos seg\'un \cite{cherven2013network}
 \end{enumerate}
 \end{frame}
 
-\begin{frame}
-\frametitle{Temas que revisaremos en la pr\'oxima sesi\'on}
-\begin{itemize}
-\item Centralidad de Grado (in/out)
-\item Centralidad de Cercan\'ia
-\item Centralidad de Intermediaci\'on
-\end{itemize}
-Otras medidas de centralidad...
-\begin{itemize}
-\item N\'umero de Erd{\"o}s 
-\item El or\'aculo de Kevin Bacon \url{http://oracleofbacon.org/}
-\end{itemize}
-\end{frame}
-
 \section{Referencias}
-\begin{frame}
+\begin{frame}[allowframebreaks]
+\footnotesize
 \frametitle{Referencias}
 \bibliographystyle{plain}
 \bibliography{../bib}
